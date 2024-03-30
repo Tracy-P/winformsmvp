@@ -17,45 +17,38 @@ namespace WinFormsMVP
         {
             _model.FirstName = "John";
         }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             _model.FirstName = "Paul";
         }
-
         private void Button3_Click(object sender, EventArgs e)
         {
             _model.FirstName = "Jane";
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            _modelTwo.FirstName = "John";
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            _modelTwo.FirstName = "Paul";
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             _modelTwo.FirstName = "Jane";
         }
-
-        private void button9_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
-            _modelThree.FirstName = "John";
+            _modelTwo.FirstName = "Paul";
         }
-
-        private void button8_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            _modelTwo.FirstName = "John";
+        }
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            _modelThree.FirstName = "Jane";
+        }
+        private void Button8_Click(object sender, EventArgs e)
         {
             _modelThree.FirstName = "Paul";
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
-            _modelThree.FirstName = "Jane";
+            _modelThree.FirstName = "John";
         }
     }
 }
