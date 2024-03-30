@@ -1,6 +1,6 @@
 namespace WinFormsMVP
 {
-    public partial class Form1 : Form
+    public partial class Form1 : BaseForm, IForm1
     {
         public Form1()
         {
@@ -8,10 +8,12 @@ namespace WinFormsMVP
             textBoxFirstName.DataBindings.Add("Text", _model, "FirstName");
             textBox1.DataBindings.Add("Text", _modelTwo, "FirstName");
             textBox2.Bind(_modelThree, "FirstName");
+            baseTextBox1.Bind(_modelFour, nameof(_modelFour.FirstName));
         }
         private readonly Model _model = new();
         private readonly ModelTwo _modelTwo = new();
         private readonly ModelTwo _modelThree = new();
+        private readonly ModelTwo _modelFour = new();
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -50,5 +52,28 @@ namespace WinFormsMVP
         {
             _modelThree.FirstName = "John";
         }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            JohnButton?.Invoke(this, "Jane");
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            PaulButton?.Invoke(this, "Paul");
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
+        {
+            JohnButton?.Invoke(this, "John");
+        }
+        public void LoadData(ModelTwo model)
+        {
+            _modelFour.FirstName = model.FirstName;
+        }
+        public event EventHandler<string>? JohnButton;
+        public event EventHandler<string>? PaulButton;
+        public event EventHandler<string>? JaneButton;
+
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsMVP
 {
-    internal class ObservableObject : INotifyPropertyChanged
+    public class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public bool Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = "")

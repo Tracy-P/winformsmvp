@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsMVP
 {
-    internal class ModelTwo : ObservableObject
+    public class ModelTwo : ObservableObject
     {
         private string _firstName = string.Empty;
         public string FirstName { get { return _firstName; } set { Set(ref _firstName, value); } }
