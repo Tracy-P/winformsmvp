@@ -38,6 +38,11 @@
             button6 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            textBox2 = new BaseTextBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // labelFirstName
@@ -132,11 +137,62 @@
             label1.TabIndex = 5;
             label1.Text = "First Name:";
             // 
+            // button7
+            // 
+            button7.Location = new Point(174, 202);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 23);
+            button7.TabIndex = 14;
+            button7.Text = "Jane";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(93, 202);
+            button8.Name = "button8";
+            button8.Size = new Size(75, 23);
+            button8.TabIndex = 13;
+            button8.Text = "Paul";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(12, 202);
+            button9.Name = "button9";
+            button9.Size = new Size(75, 23);
+            button9.TabIndex = 12;
+            button9.Text = "John";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(12, 173);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(237, 23);
+            textBox2.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 155);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 10;
+            label2.Text = "First Name:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(264, 225);
+            ClientSize = new Size(264, 260);
+            Controls.Add(button7);
+            Controls.Add(button8);
+            Controls.Add(button9);
+            Controls.Add(textBox2);
+            Controls.Add(label2);
             Controls.Add(button4);
             Controls.Add(button5);
             Controls.Add(button6);
@@ -165,5 +221,10 @@
         private Button button6;
         private TextBox textBox1;
         private Label label1;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private BaseTextBox textBox2;
+        private Label label2;
     }
 }
