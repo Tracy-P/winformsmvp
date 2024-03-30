@@ -11,8 +11,8 @@ namespace WinFormsMVP
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Form1 form = new Form1();
-            Presenter presenter = new Presenter(form);
+            Form1 form = new();
+            _ = new Presenter(form);
             Application.Run(form);
         }
     }

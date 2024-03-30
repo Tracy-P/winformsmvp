@@ -55,7 +55,7 @@ namespace WinFormsMVP
 
         private void Button10_Click(object sender, EventArgs e)
         {
-            JohnButton?.Invoke(this, "Jane");
+            JaneButton?.Invoke(this, "Jane");
         }
 
         private void Button11_Click(object sender, EventArgs e)
