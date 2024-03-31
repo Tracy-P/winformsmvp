@@ -10,5 +10,16 @@ namespace WinFormsMVP
     {
         private string _firstName = string.Empty;
         public string FirstName { get { return _firstName; } set { Set(ref _firstName, value); } }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is ModelTwo two &&
+                   FirstName == two.FirstName;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(FirstName);
+        }
     }
 }
