@@ -19,7 +19,8 @@ namespace WinFormsMVP
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(FirstName);
+            return base.GetHashCode();
+            //return HashCode.Combine(FirstName);
         }
     }
 }
